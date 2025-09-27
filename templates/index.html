@@ -1,0 +1,75 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 mb-4">Cultiva con Inteligencia Artificial</h1>
+        <p class="lead mb-4">HortechIA democratiza el conocimiento agrícola mediante IA personalizada para tu jardín</p>
+        <a href="/api/v1/" class="btn btn-light btn-lg">
+            <i class="fas fa-rocket me-2"></i>Explorar API
+        </a>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Funcionalidades del MVP</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-brain fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">IA Personalizada</h5>
+                        <p class="card-text">Recomendaciones inteligentes basadas en tu experiencia, ubicación y espacio disponible.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Gestión de Jardines</h5>
+                        <p class="card-text">Administra múltiples jardines con información detallada de suelo y exposición solar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-calendar-alt fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Planes de Cultivo</h5>
+                        <p class="card-text">Planifica y rastrea tus cultivos desde la siembra hasta la cosecha.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Seguridad y Calidad</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4><i class="fas fa-shield-alt text-success me-2"></i>Seguridad OWASP</h4>
+                <ul>
+                    <li>Autenticación segura con rate limiting</li>
+                    <li>Validación de entrada y sanitización</li>
+                    <li>Protección contra inyección SQL</li>
+                    <li>Headers de seguridad configurados</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4><i class="fas fa-certificate text-success me-2"></i>Estándares ISO</h4>
+                <ul>
+                    <li>Gestión de calidad ISO 9001</li>
+                    <li>Seguridad de información ISO 27000</li>
+                    <li>Procesos de desarrollo ISO 12207</li>
+                    <li>Testing automatizado >90% cobertura</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

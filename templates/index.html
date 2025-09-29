@@ -1,45 +1,103 @@
-<!-- templates/index.html -->
 {% extends 'base.html' %}
 
 {% block content %}
+<!-- Hero Section -->
 <section class="hero-section text-center">
     <div class="container">
-        <h1 class="display-4 mb-4">Cultiva con Inteligencia Artificial</h1>
-        <p class="lead mb-4">HortechIA democratiza el conocimiento agrícola mediante IA personalizada para tu jardín</p>
-        <a href="/api/v1/" class="btn btn-light btn-lg">
-            <i class="fas fa-rocket me-2"></i>Explorar API
-        </a>
+        <h1 class="display-4 mb-4">
+            <i class="fas fa-seedling me-3"></i>
+            Cultiva con Inteligencia Artificial
+        </h1>
+        <p class="lead mb-4">
+            HortechIA democratiza el conocimiento agrícola mediante IA personalizada para tu jardín doméstico
+        </p>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'dashboard' %}" class="api-link">
+                        <i class="fas fa-tachometer-alt me-2"></i>Mi Dashboard
+                    </a>
+                    {% if user.is_staff or user.is_superuser %}
+                    <a href="/api/v1/" class="api-link">
+                        <i class="fas fa-rocket me-2"></i>Explorar API
+                    </a>
+                    {% endif %}
+                    {% else %}
+                    <a href="{% url 'login' %}" class="api-link">
+                        <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
+                    </a>
+                    {% endif %}
+                    <a href="{% url 'plants_catalog' %}" class="api-link">
+                        <i class="fas fa-book me-2"></i>Catálogo Plantas
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- Estadísticas -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h3 class="text-success">{{ total_plants }}</h3>
+                <p class="mb-0">Plantas en Base de Datos</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-success">{{ total_users }}</h3>
+                <p class="mb-0">Usuarios Registrados</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-success">{{ total_gardens }}</h3>
+                <p class="mb-0">Jardines Creados</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Funcionalidades del MVP -->
 <section class="py-5">
     <div class="container">
-        <h2 class="text-center mb-5">Funcionalidades del MVP</h2>
+        <h2 class="text-center mb-5">Funcionalidades del Prototipo MVP</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
-                <div class="card feature-card h-100">
+                <div class="card feature-card">
                     <div class="card-body text-center">
                         <i class="fas fa-brain fa-3x text-success mb-3"></i>
                         <h5 class="card-title">IA Personalizada</h5>
-                        <p class="card-text">Recomendaciones inteligentes basadas en tu experiencia, ubicación y espacio disponible.</p>
+                        <p class="card-text">
+                            Recomendaciones inteligentes basadas en tu experiencia, ubicación y espacio disponible.
+                        </p>
+                        <div class="security-badge">Rate Limited</div>
+                        <div class="security-badge">Validado</div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card feature-card h-100">
+                <div class="card feature-card">
                     <div class="card-body text-center">
                         <i class="fas fa-leaf fa-3x text-success mb-3"></i>
                         <h5 class="card-title">Gestión de Jardines</h5>
-                        <p class="card-text">Administra múltiples jardines con información detallada de suelo y exposición solar.</p>
+                        <p class="card-text">
+                            Administra múltiples jardines con información detallada de suelo y exposición solar.
+                        </p>
+                        <div class="security-badge">Control Acceso</div>
+                        <div class="security-badge">CRUD Seguro</div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card feature-card h-100">
+                <div class="card feature-card">
                     <div class="card-body text-center">
                         <i class="fas fa-calendar-alt fa-3x text-success mb-3"></i>
                         <h5 class="card-title">Planes de Cultivo</h5>
-                        <p class="card-text">Planifica y rastrea tus cultivos desde la siembra hasta la cosecha.</p>
+                        <p class="card-text">
+                            Planifica y rastrea tus cultivos desde la siembra hasta la cosecha con seguimiento inteligente.
+                        </p>
+                        <div class="security-badge">Autorización</div>
+                        <div class="security-badge">Trazabilidad</div>
                     </div>
                 </div>
             </div>
@@ -47,27 +105,89 @@
     </div>
 </section>
 
+<!-- Seguridad y Calidad -->
 <section class="bg-light py-5">
     <div class="container">
-        <h2 class="text-center mb-5">Seguridad y Calidad</h2>
+        <h2 class="text-center mb-5">Seguridad y Calidad Implementada</h2>
         <div class="row">
             <div class="col-md-6">
                 <h4><i class="fas fa-shield-alt text-success me-2"></i>Seguridad OWASP</h4>
-                <ul>
-                    <li>Autenticación segura con rate limiting</li>
-                    <li>Validación de entrada y sanitización</li>
-                    <li>Protección contra inyección SQL</li>
-                    <li>Headers de seguridad configurados</li>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-success me-2"></i>Autenticación segura con rate limiting</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Validación de entrada y sanitización</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Protección contra inyección SQL</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Headers de seguridad configurados</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Control de acceso por usuario</li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <h4><i class="fas fa-certificate text-success me-2"></i>Estándares ISO</h4>
-                <ul>
-                    <li>Gestión de calidad ISO 9001</li>
-                    <li>Seguridad de información ISO 27000</li>
-                    <li>Procesos de desarrollo ISO 12207</li>
-                    <li>Testing automatizado >90% cobertura</li>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-check text-success me-2"></i>Gestión de calidad ISO 9001</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Seguridad de información ISO 27000</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Procesos de desarrollo ISO 12207</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Testing automatizado >90% cobertura</li>
+                    <li><i class="fas fa-check text-success me-2"></i>Documentación técnica completa</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Endpoints Principales -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Funcionalidades Principales</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-success text-white">
+                        <i class="fas fa-user me-2"></i>Para Usuarios Registrados
+                    </div>
+                    <div class="card-body">
+                        <p><i class="fas fa-leaf me-2"></i>Gestión completa de jardines</p>
+                        <p><i class="fas fa-brain me-2"></i>Recomendaciones de IA personalizadas</p>
+                        <p><i class="fas fa-calendar-alt me-2"></i>Planes de cultivo inteligentes</p>
+                        <p><i class="fas fa-camera me-2"></i>Identificación de plantas por foto</p>
+                        <p><i class="fas fa-bell me-2"></i>Notificaciones de cuidado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-info text-white">
+                        <i class="fas fa-globe me-2"></i>Acceso Público
+                    </div>
+                    <div class="card-body">
+                        <p><i class="fas fa-book me-2"></i>Catálogo completo de plantas</p>
+                        <p><i class="fas fa-search me-2"></i>Búsqueda y filtros avanzados</p>
+                        <p><i class="fas fa-info-circle me-2"></i>Información detallada de cultivos</p>
+                        <p><i class="fas fa-user-plus me-2"></i>Registro gratuito</p>
+                        {% if user.is_staff or user.is_superuser %}
+                        <p><i class="fas fa-code me-2"></i>API REST para desarrolladores</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Usuario Demo -->
+<section class="bg-light py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h4 class="mb-2"><i class="fas fa-user-plus me-2"></i>¿Nuevo en HortechIA?</h4>
+                <p class="mb-0">Regístrate para comenzar tu aventura de jardinería inteligente con IA personalizada.</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a href="{% url 'register' %}" class="btn btn-primary me-2">
+                    <i class="fas fa-user-plus me-1"></i>Registrarse
+                </a>
+                <a href="{% url 'login' %}" class="btn btn-outline-success">
+                    <i class="fas fa-sign-in-alt me-1"></i>Iniciar Sesión
+                </a>
             </div>
         </div>
     </div>

@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block title %}Crear Plan de Cultivo - {{ garden.name }} - HortechIA{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h4><i class="fas fa-calendar-plus me-2"></i>Crear Plan de Cultivo</h4>
+                    <small>Para: {{ garden.name }}</small>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <label for="plant_id" class="form-label">
+                                <i class="fas fa-seedling me-1"></i>Selecciona la Planta *
+                            </label>
+                            <select class="form-select" id="plant_id" name="plant_id" required>
+                                <option value="">Elige una planta para cultivar</option>
+                                {% for plant in plants %}
+                                <option value="{{ plant.id }}" 
+                                        data-difficulty="{{ plant.difficulty }}"
+                                        data-days="{{ plant.harvest_time_days }}"
+                                        data-space="{{ plant.space_required }}">
+                                    {{ plant.name }} - {{ plant.get_difficulty_display }} ({{ plant.harvest_time_days }} días)
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="planting_date" class="form-label">
+                                <i class="fas fa-calendar me-1"></i>Fecha de Siembra *
+                            </label>
+                            <input type="date" class="form-control" id="planting_date" name="planting_date" 
+                                   required min="{% now 'Y-m-d' %}">
+                            <div class="form-text">¿Cuándo planeas sembrar esta planta?</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="notes" class="form-label">
+                                <i class="fas fa-sticky-note me-1"></i>Notas del Plan
+                            </label>
+                            <textarea class="form-control" id="notes" name="notes" rows="3"
+                                      placeholder="Anota observaciones, objetivos o recordatorios especiales para este cultivo..."></textarea>
+                        </div>
+
+                        <!-- Información de la planta seleccionada -->
+                        <div id="plant-info" class="alert alert-info d-none">
+                            <h6><i class="fas fa-info-circle me-1"></i>Información de la Planta</h6>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <small class="text-muted">Dificultad:</small><br>
+                                    <span id="plant-difficulty"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    <small class="text-muted">Tiempo de cosecha:</small><br>
+                                    <span id="plant-days"></span> días
+                                </div>
+                                <div class="col-md-4">
+                                    <small class="text-muted">Espacio requerido:</small><br>
+                                    <span id="plant-space"></span> m²
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <small class="text-muted">Fecha estimada de cosecha:</small><br>
+                                <strong id="harvest-date"></strong>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'garden_detail' garden.id %}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-save me-1"></i>Crear Plan de Cultivo
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Consejos -->
+            <div class="card mt-4">
+                <div class="card-header bg-success text-white">
+                    <h6><i class="fas fa-lightbulb me-1"></i>Consejos para tu Plan de Cultivo</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Para Principiantes:</h6>
+                            <ul class="small">
+                                <li>Comienza con plantas fáciles como lechuga o albahaca</li>
+                                <li>Siembra pocas variedades la primera vez</li>
+                                <li>Verifica que tengas suficiente espacio</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Timing Importante:</h6>
+                            <ul class="small">
+                                <li>Considera la estación actual</li>
+                                <li>Revisa el clima de tu zona</li>
+                                <li>Planifica la cosecha según tus necesidades</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const plantSelect = document.getElementById('plant_id');
+    const plantingDateInput = document.getElementById('planting_date');
+    const plantInfo = document.getElementById('plant-info');
+    
+    plantSelect.addEventListener('change', function() {
+        const selectedOption = this.options[this.selectedIndex];
+        
+        if (selectedOption.value) {
+            // Mostrar información de la planta
+            document.getElementById('plant-difficulty').textContent = selectedOption.dataset.difficulty;
+            document.getElementById('plant-days').textContent = selectedOption.dataset.days;
+            document.getElementById('plant-space').textContent = selectedOption.dataset.space;
+            
+            plantInfo.classList.remove('d-none');
+            
+            // Calcular fecha de cosecha cuando se selecciona fecha de siembra
+            updateHarvestDate();
+        } else {
+            plantInfo.classList.add('d-none');
+        }
+    });
+    
+    plantingDateInput.addEventListener('change', updateHarvestDate);
+    
+    function updateHarvestDate() {
+        const selectedOption = plantSelect.options[plantSelect.selectedIndex];
+        const plantingDate = plantingDateInput.value;
+        
+        if (selectedOption.value && plantingDate) {
+            const planting = new Date(plantingDate);
+            const harvestDays = parseInt(selectedOption.dataset.days);
+            const harvest = new Date(planting.getTime() + (harvestDays * 24 * 60 * 60 * 1000));
+            
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('harvest-date').textContent = harvest.toLocaleDateString('es-ES', options);
+        }
+    }
+});
+</script>
+{% endblock %}

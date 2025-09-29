@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+
+{% block title %}Mi Dashboard - HortechIA{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Header del Dashboard -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>Bienvenido, {{ user.first_name|default:user.username }}!</h2>
+            <p class="text-muted">Gestiona tus jardines y cultivos de manera inteligente</p>
+            {% if user.is_staff or user.is_superuser %}
+            <span class="badge bg-warning text-dark">
+                <i class="fas fa-crown me-1"></i>Administrador
+            </span>
+            {% endif %}
+        </div>
+        <div class="col-md-4 text-md-end">
+            <a href="{% url 'logout' %}" class="btn btn-outline-danger">
+                <i class="fas fa-sign-out-alt me-1"></i>Cerrar Sesión
+            </a>
+        </div>
+    </div>
+
+    <!-- Estadísticas rápidas -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card text-center border-success">
+                <div class="card-body">
+                    <i class="fas fa-leaf fa-2x text-success mb-2"></i>
+                    <h4 class="text-success">{{ total_gardens }}</h4>
+                    <p class="mb-0">Jardines Activos</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center border-warning">
+                <div class="card-body">
+                    <i class="fas fa-seedling fa-2x text-warning mb-2"></i>
+                    <h4 class="text-warning">{{ active_plans }}</h4>
+                    <p class="mb-0">Cultivos en Progreso</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center border-info">
+                <div class="card-body">
+                    <i class="fas fa-user-graduate fa-2x text-info mb-2"></i>
+                    <h4 class="text-info">{{ user.get_experience_level_display }}</h4>
+                    <p class="mb-0">Nivel de Experiencia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if user.is_staff or user.is_superuser %}
+    <!-- Panel de Administración -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <h5><i class="fas fa-tools me-2"></i>Herramientas de Administrador</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-2">
+                            <a href="/admin/" class="btn btn-warning w-100" target="_blank">
+                                <i class="fas fa-cog me-1"></i>Panel Admin
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <a href="/api/v1/" class="btn btn-outline-warning w-100" target="_blank">
+                                <i class="fas fa-code me-1"></i>API REST
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <a href="/admin/core/customuser/" class="btn btn-outline-warning w-100" target="_blank">
+                                <i class="fas fa-users me-1"></i>Gestionar Usuarios
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <a href="/admin/gardens/plant/" class="btn btn-outline-warning w-100" target="_blank">
+                                <i class="fas fa-leaf me-1"></i>Gestionar Plantas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Acciones rápidas -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-rocket me-2"></i>Acciones Rápidas</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <a href="{% url 'create_garden' %}" class="btn btn-success w-100">
+                                <i class="fas fa-plus me-1"></i>Nuevo Jardín
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <a href="{% url 'plants_catalog' %}" class="btn btn-info w-100">
+                                <i class="fas fa-book me-1"></i>Catálogo Plantas
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <a href="{% url 'gardens_list' %}" class="btn btn-outline-success w-100">
+                                <i class="fas fa-list me-1"></i>Mis Jardines
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mis Jardines -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5><i class="fas fa-leaf me-2"></i>Mis Jardines</h5>
+                    <a href="{% url 'create_garden' %}" class="btn btn-success btn-sm">
+                        <i class="fas fa-plus me-1"></i>Nuevo Jardín
+                    </a>
+                </div>
+                <div class="card-body">
+                    {% if user_gardens %}
+                        <div class="row">
+                            {% for garden in user_gardens %}
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <div class="card h-100 garden-card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">
+                                            <i class="fas fa-seedling text-success me-1"></i>
+                                            {{ garden.name }}
+                                        </h6>
+                                        <p class="card-text text-muted small">
+                                            <i class="fas fa-map-marker-alt me-1"></i>{{ garden.location }}
+                                        </p>
+                                        <p class="card-text small">
+                                            <span class="badge bg-light text-dark">{{ garden.size_m2 }}m²</span>
+                                            <span class="badge bg-light text-dark">{{ garden.get_soil_type_display }}</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer bg-transparent">
+                                        <div class="btn-group w-100" role="group">
+                                            <a href="{% url 'garden_detail' garden.id %}" class="btn btn-outline-success btn-sm">
+                                                <i class="fas fa-eye me-1"></i>Ver
+                                            </a>
+                                            <a href="{% url 'ai_recommendations' garden.id %}" class="btn btn-outline-info btn-sm">
+                                                <i class="fas fa-brain me-1"></i>IA
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="text-center py-4">
+                            <i class="fas fa-seedling fa-3x text-muted mb-3"></i>
+                            <h5>No tienes jardines aún</h5>
+                            <p class="text-muted">Crea tu primer jardín para comenzar tu aventura de jardinería inteligente</p>
+                            <a href="{% url 'create_garden' %}" class="btn btn-success">
+                                <i class="fas fa-plus me-1"></i>Crear Mi Primer Jardín
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plantas Recomendadas -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-star me-2"></i>Plantas Recomendadas para Ti</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for plant in recent_plants %}
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="card-title">{{ plant.name }}</h6>
+                                    <p class="card-text small text-muted">{{ plant.scientific_name }}</p>
+                                    <p class="card-text">{{ plant.description|truncatewords:15 }}</p>
+                                    <span class="badge bg-success">{{ plant.get_difficulty_display }}</span>
+                                    <span class="badge bg-info">{{ plant.harvest_time_days }} días</span>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="{% url 'plant_detail' plant.id %}" class="btn btn-outline-primary btn-sm w-100">
+                                        <i class="fas fa-info-circle me-1"></i>Ver Detalles
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="{% url 'plants_catalog' %}" class="btn btn-outline-success">
+                            <i class="fas fa-book-open me-1"></i>Ver Catálogo Completo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.garden-card {
+    transition: transform 0.2s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.garden-card:hover {
+    transform: translateY(-2px);
+    border-color: #28a745;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+</style>
+{% endblock %}

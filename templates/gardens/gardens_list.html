@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Mis Jardines - HortechIA{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2><i class="fas fa-leaf me-2"></i>Mis Jardines</h2>
+            <p class="text-muted">Gestiona todos tus jardines desde aquí</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <a href="{% url 'create_garden' %}" class="btn btn-success">
+                <i class="fas fa-plus me-1"></i>Nuevo Jardín
+            </a>
+        </div>
+    </div>
+
+    {% if page_obj %}
+        <div class="row">
+            {% for garden in page_obj %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-seedling text-success me-2"></i>
+                            {{ garden.name }}
+                        </h5>
+                        <p class="card-text text-muted">
+                            <i class="fas fa-map-marker-alt me-1"></i>{{ garden.location }}
+                        </p>
+                        <div class="mb-2">
+                            <span class="badge bg-light text-dark">{{ garden.size_m2 }}m²</span>
+                            <span class="badge bg-light text-dark">{{ garden.get_soil_type_display }}</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'garden_detail' garden.id %}" class="btn btn-success w-100">
+                            <i class="fas fa-eye me-1"></i>Ver Jardín
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center py-5">
+            <i class="fas fa-seedling fa-4x text-muted mb-4"></i>
+            <h3>¡Comienza tu viaje de jardinería!</h3>
+            <p class="text-muted mb-4">Crea tu primer jardín y comienza a cultivar con IA.</p>
+            <a href="{% url 'create_garden' %}" class="btn btn-success btn-lg">
+                <i class="fas fa-plus me-2"></i>Crear Mi Primer Jardín
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

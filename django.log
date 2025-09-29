@@ -182,3 +182,1900 @@ Forbidden: /api/v1/
 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 23, in home
+    return render(request, 'index.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plants_catalog' not found. 'plants_catalog' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 140388
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 23, in home
+    return render(request, 'index.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plants_catalog' not found. 'plants_catalog' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 140388
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 19, in home
+    return render(request, 'index.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plants_catalog' not found. 'plants_catalog' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 141672
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 13712
+"GET /dashboard/ HTTP/1.1" 200 17433
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /plantas/ HTTP/1.1" 200 20361
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 7247
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6874
+"POST /login/ HTTP/1.1" 200 7244
+"POST /login/ HTTP/1.1" 200 7244
+"POST /login/ HTTP/1.1" 200 7244
+"GET /plantas/ HTTP/1.1" 200 19058
+Internal Server Error: /plantas/2/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 134, in plant_detail
+    return render(request, 'plants/plant_detail.html', {'plant': plant})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: plants/plant_detail.html
+"GET /plantas/2/ HTTP/1.1" 500 88020
+Internal Server Error: /plantas/3/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 134, in plant_detail
+    return render(request, 'plants/plant_detail.html', {'plant': plant})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: plants/plant_detail.html
+"GET /plantas/3/ HTTP/1.1" 500 88005
+"GET / HTTP/1.1" 200 12409
+"GET /plantas/ HTTP/1.1" 200 19058
+Internal Server Error: /plantas/7/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 134, in plant_detail
+    return render(request, 'plants/plant_detail.html', {'plant': plant})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: plants/plant_detail.html
+"GET /plantas/7/ HTTP/1.1" 500 88005
+"GET /plantas/?search=None&difficulty=easy HTTP/1.1" 200 7118
+"GET /plantas/?search=None&difficulty=medium HTTP/1.1" 200 7118
+"GET /plantas/?search=None&difficulty=hard HTTP/1.1" 200 7118
+"GET /plantas/ HTTP/1.1" 200 19058
+"GET /plantas/?search=Albahaca&difficulty= HTTP/1.1" 200 8553
+"GET /login/ HTTP/1.1" 200 6874
+"POST /login/ HTTP/1.1" 200 7244
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /login/ HTTP/1.1" 200 6874
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6874
+"POST /login/ HTTP/1.1" 200 7244
+"POST /login/ HTTP/1.1" 200 7244
+"POST /login/ HTTP/1.1" 200 7244
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /login/ HTTP/1.1" 200 6874
+"GET / HTTP/1.1" 200 12409
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8737
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /admin/core/customuser/ HTTP/1.1" 200 14482
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+"GET /admin/core/customuser/1/change/ HTTP/1.1" 200 27413
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+"GET /admin/core/customuser/1/password/ HTTP/1.1" 200 9720
+"POST /admin/core/customuser/1/password/ HTTP/1.1" 200 9979
+"POST /admin/core/customuser/1/password/ HTTP/1.1" 200 9979
+"POST /admin/core/customuser/1/password/ HTTP/1.1" 302 0
+"GET /admin/core/customuser/1/change/ HTTP/1.1" 200 27560
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/auth/group/ HTTP/1.1" 200 9735
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/ai_recommendations/airecommendation/ HTTP/1.1" 200 11824
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/ai_recommendations/userfeedback/ HTTP/1.1" 200 11162
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/auth/group/ HTTP/1.1" 200 9735
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/ HTTP/1.1" 200 14482
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/2/change/ HTTP/1.1" 200 27437
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/2/password/ HTTP/1.1" 200 9725
+"POST /admin/core/customuser/2/password/ HTTP/1.1" 200 9948
+"POST /admin/core/customuser/2/password/ HTTP/1.1" 200 9948
+"POST /admin/core/customuser/2/password/ HTTP/1.1" 200 9948
+"GET /admin/core/customuser/ HTTP/1.1" 200 14482
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/?o=3.1 HTTP/1.1" 200 15154
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/?o=-3.1 HTTP/1.1" 200 15177
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/ai_recommendations/userfeedback/ HTTP/1.1" 200 11162
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/ HTTP/1.1" 200 14482
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/3/change/ HTTP/1.1" 200 27430
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"POST /admin/core/customuser/3/change/ HTTP/1.1" 302 0
+"GET /admin/core/customuser/ HTTP/1.1" 200 14690
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"POST /admin/logout/ HTTP/1.1" 200 3633
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6874
+"POST /login/ HTTP/1.1" 200 7244
+"POST /login/ HTTP/1.1" 200 7244
+"GET /login/ HTTP/1.1" 200 6874
+"GET /login/ HTTP/1.1" 200 6874
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET / HTTP/1.1" 200 12409
+"GET /plantas/ HTTP/1.1" 200 19058
+"GET /plantas/?search=None&difficulty=hard HTTP/1.1" 200 7118
+"GET /plantas/ HTTP/1.1" 200 19058
+"GET /plantas/ HTTP/1.1" 200 19058
+"GET /plantas/?search=None&difficulty=easy HTTP/1.1" 200 7118
+"GET /plantas/?search=None&difficulty=medium HTTP/1.1" 200 7118
+"GET /login/ HTTP/1.1" 200 6874
+"GET / HTTP/1.1" 200 12409
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /plantas/ HTTP/1.1" 200 19058
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6874
+"POST /login/ HTTP/1.1" 200 7244
+"POST /login/ HTTP/1.1" 200 7244
+"POST /login/ HTTP/1.1" 200 7244
+"POST /login/ HTTP/1.1" 200 7244
+"GET /plantas/ HTTP/1.1" 200 20705
+"GET /plantas/?search=None&difficulty=easy HTTP/1.1" 200 7118
+"GET /plantas/?search=None&difficulty=medium HTTP/1.1" 200 7118
+"GET /plantas/?search=None&difficulty=hard HTTP/1.1" 200 7118
+"GET /plantas/?search=Perejil&difficulty=hard HTTP/1.1" 200 7121
+"GET /plantas/ HTTP/1.1" 200 20705
+"GET /plantas/?search=Apio&difficulty= HTTP/1.1" 200 8543
+"GET /plantas/23/ HTTP/1.1" 200 6228
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4426
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4426
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /login/ HTTP/1.1" 200 8181
+"POST /login/ HTTP/1.1" 200 8551
+"POST /login/ HTTP/1.1" 200 8551
+"GET /plantas/ HTTP/1.1" 200 22016
+"GET /dashboard/ HTTP/1.1" 200 17374
+Internal Server Error: /jardines/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 82, in gardens_list
+    return render(request, 'gardens/gardens_list.html', {'page_obj': page_obj})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/gardens_list.html
+"GET /jardines/ HTTP/1.1" 500 93612
+"GET /plantas/ HTTP/1.1" 200 22016
+"GET /plantas/?search=None&difficulty=medium HTTP/1.1" 200 8429
+"GET /plantas/?search=None&difficulty=hard HTTP/1.1" 200 8429
+"GET /plantas/?search=None&difficulty=easy HTTP/1.1" 200 8429
+"GET /dashboard/ HTTP/1.1" 200 17374
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+"GET /dashboard/ HTTP/1.1" 200 17374
+"GET /plantas/ HTTP/1.1" 200 22016
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+"GET /plantas/ HTTP/1.1" 200 22016
+Internal Server Error: /jardines/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 82, in gardens_list
+    return render(request, 'gardens/gardens_list.html', {'page_obj': page_obj})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/gardens_list.html
+"GET /jardines/ HTTP/1.1" 500 93610
+"GET /dashboard/ HTTP/1.1" 200 17374
+"GET /plantas/ HTTP/1.1" 200 22016
+"GET /dashboard/ HTTP/1.1" 200 17374
+"GET /plantas/ HTTP/1.1" 200 22016
+"GET /dashboard/ HTTP/1.1" 200 17374
+"GET /plantas/ HTTP/1.1" 200 22016
+"GET / HTTP/1.1" 200 13720
+"GET /plantas/ HTTP/1.1" 200 22016
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /dashboard/ HTTP/1.1" 200 17374
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /login/ HTTP/1.1" 200 8181
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET / HTTP/1.1" 200 13720
+"GET /plantas/ HTTP/1.1" 200 22016
+"GET /plantas/16/ HTTP/1.1" 200 7555
+"GET /plantas/?search=None&difficulty=medium HTTP/1.1" 200 8429
+"GET /dashboard/ HTTP/1.1" 200 17374
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+"GET /plantas/ HTTP/1.1" 200 20705
+"GET /plantas/17/ HTTP/1.1" 200 6236
+"GET / HTTP/1.1" 200 12409
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /login/ HTTP/1.1" 200 7247
+"POST /login/ HTTP/1.1" 200 7244
+"GET /login/ HTTP/1.1" 200 6874
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /plantas/ HTTP/1.1" 200 20705
+"GET /login/ HTTP/1.1" 200 6874
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"POST /admin/logout/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /login/ HTTP/1.1" 200 6874
+"POST /login/ HTTP/1.1" 200 7244
+"GET / HTTP/1.1" 200 12409
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET / HTTP/1.1" 200 13720
+"GET / HTTP/1.1" 200 13720
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+Forbidden (CSRF token from POST incorrect.): /admin/login/
+"POST /admin/login/?next=/admin/ HTTP/1.1" 403 2529
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4368
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4435
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4435
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4435
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /admin/gardens/cultivationplan/ HTTP/1.1" 200 11040
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /admin/gardens/garden/ HTTP/1.1" 200 11028
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/gardens/plant/ HTTP/1.1" 200 15798
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /admin/core/customuser/ HTTP/1.1" 200 14063
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/auth/group/ HTTP/1.1" 200 9734
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/ HTTP/1.1" 200 14063
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/ai_recommendations/userfeedback/ HTTP/1.1" 200 11161
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/ai_recommendations/airecommendation/ HTTP/1.1" 200 11823
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/ HTTP/1.1" 200 14063
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/9/change/ HTTP/1.1" 200 27441
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 13720
+"GET /dashboard/ HTTP/1.1" 200 17374
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /plantas/?search=&difficulty=easy HTTP/1.1" 200 13340
+"GET /plantas/?search=&difficulty=medium HTTP/1.1" 200 13331
+"GET /plantas/?search=&difficulty=hard HTTP/1.1" 200 11603
+"GET /dashboard/ HTTP/1.1" 200 17374
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+"GET /admin/ HTTP/1.1" 200 8736
+Internal Server Error: /jardines/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 83, in gardens_list
+    return render(request, 'gardens/gardens_list.html', {'page_obj': page_obj})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/gardens_list.html
+"GET /jardines/ HTTP/1.1" 500 93617
+"GET / HTTP/1.1" 200 13720
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 7247
+"POST /login/ HTTP/1.1" 200 7242
+"POST /login/ HTTP/1.1" 200 7242
+"GET /login/ HTTP/1.1" 200 6874
+"POST /login/ HTTP/1.1" 200 7242
+"GET /jardines/ HTTP/1.1" 302 0
+"GET /login/?next=/jardines/ HTTP/1.1" 200 6874
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6874
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6874
+Forbidden (CSRF token from POST incorrect.): /admin/logout/
+"POST /admin/logout/ HTTP/1.1" 403 2529
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6874
+"POST /login/ HTTP/1.1" 200 7242
+"POST /login/ HTTP/1.1" 200 7242
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET / HTTP/1.1" 200 12409
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET / HTTP/1.1" 200 13720
+Internal Server Error: /jardines/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 83, in gardens_list
+    return render(request, 'gardens/gardens_list.html', {'page_obj': page_obj})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/gardens_list.html
+"GET /jardines/ HTTP/1.1" 500 93602
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 13720
+Internal Server Error: /jardines/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 83, in gardens_list
+    return render(request, 'gardens/gardens_list.html', {'page_obj': page_obj})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/gardens_list.html
+"GET /jardines/ HTTP/1.1" 500 93602
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /plantas/?search=&difficulty=medium HTTP/1.1" 200 13331
+"GET /plantas/?search=&difficulty=easy HTTP/1.1" 200 13340
+"GET /plantas/?search=&difficulty=hard HTTP/1.1" 200 11603
+"GET /plantas/?search=Apio&difficulty=hard HTTP/1.1" 200 9862
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+Internal Server Error: /jardines/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 83, in gardens_list
+    return render(request, 'gardens/gardens_list.html', {'page_obj': page_obj})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/gardens_list.html
+"GET /jardines/ HTTP/1.1" 500 93612
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+"POST /jardines/crear/ HTTP/1.1" 302 0
+Internal Server Error: /jardines/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 83, in gardens_list
+    return render(request, 'gardens/gardens_list.html', {'page_obj': page_obj})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/gardens_list.html
+"GET /jardines/ HTTP/1.1" 500 94069
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+Internal Server Error: /jardines/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 83, in gardens_list
+    return render(request, 'gardens/gardens_list.html', {'page_obj': page_obj})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/gardens_list.html
+"GET /jardines/ HTTP/1.1" 500 93932
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 7018
+"POST /login/ HTTP/1.1" 200 6674
+"POST /login/ HTTP/1.1" 200 6674
+"GET /login/ HTTP/1.1" 200 6319
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET / HTTP/1.1" 200 12409
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /plantas/ HTTP/1.1" 200 20701
+"GET /plantas/ HTTP/1.1" 200 20701
+"GET /plantas/ HTTP/1.1" 200 20701
+"GET /login/ HTTP/1.1" 200 6319
+"GET /login/ HTTP/1.1" 200 6319
+"GET /login/ HTTP/1.1" 200 6319
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET / HTTP/1.1" 200 13720
+Internal Server Error: /jardines/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 83, in gardens_list
+    return render(request, 'gardens/gardens_list.html', {'page_obj': page_obj})
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/gardens_list.html
+"GET /jardines/ HTTP/1.1" 500 93635
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 13720
+"GET /jardines/ HTTP/1.1" 200 6709
+Internal Server Error: /jardines/2/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 95, in garden_detail
+    return render(request, 'gardens/garden_detail.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/garden_detail.html
+"GET /jardines/2/ HTTP/1.1" 500 93697
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+Internal Server Error: /jardines/2/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 95, in garden_detail
+    return render(request, 'gardens/garden_detail.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/garden_detail.html
+"GET /jardines/2/ HTTP/1.1" 500 93697
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6679
+"POST /login/ HTTP/1.1" 200 6674
+"POST /login/ HTTP/1.1" 200 6674
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6319
+"POST /login/ HTTP/1.1" 200 6674
+"POST /login/ HTTP/1.1" 200 6674
+"GET /login/ HTTP/1.1" 200 6319
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /plantas/ HTTP/1.1" 200 20701
+"GET /plantas/?search=&difficulty=easy HTTP/1.1" 200 12029
+"GET /plantas/?search=&difficulty=hard HTTP/1.1" 200 10292
+"GET /plantas/?search=&difficulty=medium HTTP/1.1" 200 12020
+"GET /plantas/?search=apio&difficulty=medium HTTP/1.1" 200 7118
+"GET /plantas/?search=Apio&difficulty=medium HTTP/1.1" 200 7118
+"GET /plantas/?search=Apio&difficulty=medium HTTP/1.1" 200 7118
+"GET /plantas/?search=Apio&difficulty=medium HTTP/1.1" 200 7118
+"GET /plantas/?search=Apio&difficulty=medium HTTP/1.1" 200 7118
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET /plantas/?search=Apio&difficulty= HTTP/1.1" 200 8543
+"GET /plantas/?search=Apio&difficulty=hard HTTP/1.1" 200 8551
+"GET /plantas/?search=Apio&difficulty= HTTP/1.1" 200 8543
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6319
+"POST /login/ HTTP/1.1" 200 6674
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET / HTTP/1.1" 200 12409
+"GET /plantas/ HTTP/1.1" 200 20701
+"GET /plantas/?search=Apio&difficulty= HTTP/1.1" 200 8543
+"GET /plantas/?search=&difficulty=hard HTTP/1.1" 200 10292
+"GET / HTTP/1.1" 200 12409
+"GET /plantas/ HTTP/1.1" 200 20701
+"GET /plantas/ HTTP/1.1" 200 20701
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+"GET / HTTP/1.1" 200 12409
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /admin/core/customuser/ HTTP/1.1" 200 14063
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 13720
+"GET /jardines/ HTTP/1.1" 200 7898
+Internal Server Error: /jardines/2/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 95, in garden_detail
+    return render(request, 'gardens/garden_detail.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/garden_detail.html
+"GET /jardines/2/ HTTP/1.1" 500 93577
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10147
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+Internal Server Error: /jardines/2/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 95, in garden_detail
+    return render(request, 'gardens/garden_detail.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/garden_detail.html
+"GET /jardines/2/ HTTP/1.1" 500 93891
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 13720
+"GET /jardines/ HTTP/1.1" 200 7898
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10147
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 13720
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4039
+"GET /jardines/ HTTP/1.1" 200 7898
+Internal Server Error: /jardines/2/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 95, in garden_detail
+    return render(request, 'gardens/garden_detail.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/garden_detail.html
+"GET /jardines/2/ HTTP/1.1" 500 93577
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10147
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+Internal Server Error: /jardines/2/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 95, in garden_detail
+    return render(request, 'gardens/garden_detail.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/garden_detail.html
+"GET /jardines/2/ HTTP/1.1" 500 93891
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10147
+"GET / HTTP/1.1" 200 13720
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/ HTTP/1.1" 200 7898
+"GET /admin/ HTTP/1.1" 200 9089
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /jardines/ HTTP/1.1" 200 7898
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /plantas/ HTTP/1.1" 200 22012
+Not Found: /api/v1/
+"GET /api/v1/ HTTP/1.1" 404 4027
+C:\Users\Rose_\hortechia-mvp\hortechia_project\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 13720
+"GET /api/v1/ HTTP/1.1" 200 5933
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /api/v1/ HTTP/1.1" 200 5933
+"GET /admin/ HTTP/1.1" 200 8736
+"GET / HTTP/1.1" 200 13720
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+"GET /jardines/ HTTP/1.1" 200 7898
+Internal Server Error: /jardines/2/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 95, in garden_detail
+    return render(request, 'gardens/garden_detail.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/garden_detail.html
+"GET /jardines/2/ HTTP/1.1" 500 93577
+Internal Server Error: /jardines/2/
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 95, in garden_detail
+    return render(request, 'gardens/garden_detail.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: gardens/garden_detail.html
+"GET /jardines/2/ HTTP/1.1" 500 93577
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 13720
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10147
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /plantas/?search=&difficulty=hard HTTP/1.1" 200 11603
+"GET /plantas/?search=Apio&difficulty= HTTP/1.1" 200 9854
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET /admin/ HTTP/1.1" 200 8889
+"GET /api/v1/ HTTP/1.1" 200 5933
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10147
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET / HTTP/1.1" 200 13720
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6679
+"POST /login/ HTTP/1.1" 200 6674
+"POST /login/ HTTP/1.1" 200 6674
+Forbidden: /api/v1/
+"GET /api/v1/ HTTP/1.1" 403 4998
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4439
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4440
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4440
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /admin/core/customuser/ HTTP/1.1" 200 14063
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 13720
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /plantas/?search=&difficulty=hard HTTP/1.1" 200 11603
+"GET /plantas/?search=Apio&difficulty=hard HTTP/1.1" 200 9862
+"GET /plantas/?search=Tomate&difficulty= HTTP/1.1" 200 9875
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10147
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /jardines/2/crear-plan/ HTTP/1.1" 200 15756
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /plantas/ HTTP/1.1" 200 22012
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+"GET /admin/ HTTP/1.1" 200 9089
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6679
+"GET /login/ HTTP/1.1" 200 6319
+Forbidden: /api/v1/
+"GET /api/v1/ HTTP/1.1" 403 4998
+"GET /api-auth/login/?next=/api/v1/ HTTP/1.1" 200 2708
+"POST /api-auth/login/ HTTP/1.1" 302 0
+"GET /api/v1/ HTTP/1.1" 200 5933
+"GET /api-auth/logout/?next=/api/v1/ HTTP/1.1" 302 0
+Forbidden: /api/v1/
+"GET /api/v1/ HTTP/1.1" 403 4998
+Forbidden (CSRF token from POST incorrect.): /admin/logout/
+"POST /admin/logout/ HTTP/1.1" 403 2529
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4440
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"POST /admin/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+"GET / HTTP/1.1" 200 12409
+"GET /admin/password_change/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/password_change/ HTTP/1.1" 200 4269
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4440
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"POST /admin/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12409
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12409
+"GET /login/ HTTP/1.1" 200 6319
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 23, in home
+    return render(request, 'index.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plants_catalog' not found. 'plants_catalog' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 141694
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Rose_\hortechia-mvp\core\views.py", line 23, in home
+    return render(request, 'index.html', context)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rose_\hortechia-mvp\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plants_catalog' not found. 'plants_catalog' is not a valid view function or pattern name.
+"GET / HTTP/1.1" 500 141694
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+"GET /register/ HTTP/1.1" 200 10702
+Forbidden: /api/v1/
+"GET /api/v1/ HTTP/1.1" 403 4998
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET / HTTP/1.1" 200 13945
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12634
+"GET / HTTP/1.1" 200 12634
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4368
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"POST /admin/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12634
+"GET /plantas/ HTTP/1.1" 200 20705
+Forbidden: /api/v1/
+"GET /api/v1/ HTTP/1.1" 403 4998
+"GET /login/ HTTP/1.1" 200 6298
+"GET /register/ HTTP/1.1" 200 10702
+"POST /register/ HTTP/1.1" 200 11099
+"GET /login/ HTTP/1.1" 200 6298
+"POST /login/ HTTP/1.1" 200 6668
+"POST /login/ HTTP/1.1" 200 6668
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET / HTTP/1.1" 200 13945
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/crear/ HTTP/1.1" 200 12596
+"GET /plantas/ HTTP/1.1" 200 22016
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /plantas/ HTTP/1.1" 200 22016
+"GET / HTTP/1.1" 200 13945
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /jardines/ HTTP/1.1" 200 7050
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10147
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23748
+"GET /jardines/2/ HTTP/1.1" 200 9931
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 7020
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+"POST /login/ HTTP/1.1" 200 6668
+"POST /login/ HTTP/1.1" 200 6668
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /admin/core/customuser/ HTTP/1.1" 200 14503
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"POST /admin/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12634
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4381
+"GET /login/ HTTP/1.1" 200 6298
+"POST /login/ HTTP/1.1" 200 6667
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+"POST /login/ HTTP/1.1" 200 6667
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+"POST /login/ HTTP/1.1" 200 6667
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+"POST /login/ HTTP/1.1" 200 6667
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+"POST /login/ HTTP/1.1" 200 6667
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+"POST /login/ HTTP/1.1" 200 6667
+"POST /login/ HTTP/1.1" 200 6667
+"POST /login/ HTTP/1.1" 200 6667
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 7284
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6999
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 7274
+"GET /jardines/crear/ HTTP/1.1" 200 12589
+"POST /jardines/crear/ HTTP/1.1" 302 0
+"GET /jardines/ HTTP/1.1" 200 7044
+"GET /jardines/3/ HTTP/1.1" 200 9927
+"GET /jardines/3/recomendaciones/ HTTP/1.1" 200 10147
+"POST /jardines/3/recomendaciones/ HTTP/1.1" 200 18723
+"POST /jardines/3/recomendaciones/ HTTP/1.1" 200 18723
+"GET /jardines/3/crear-plan/?plant_id=18 HTTP/1.1" 200 15753
+"GET /dashboard/ HTTP/1.1" 200 7274
+"GET /plantas/ HTTP/1.1" 200 22009
+"GET /plantas/?search=Apio&difficulty=hard HTTP/1.1" 200 9855
+"GET /plantas/23/ HTTP/1.1" 200 9083
+"GET /dashboard/ HTTP/1.1" 200 7274
+"GET /jardines/ HTTP/1.1" 200 7044
+"GET /jardines/3/ HTTP/1.1" 200 9927
+"GET /dashboard/ HTTP/1.1" 200 7274
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4201
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6671
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 7276
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 3897
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 3973
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 3771
+"GET /login/ HTTP/1.1" 200 7599
+"GET /api/v1/ HTTP/1.1" 200 5932
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12634
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4368
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 8736
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /admin/core/customuser/ HTTP/1.1" 200 15783
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"POST /admin/core/customuser/ HTTP/1.1" 200 10251
+"GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+"POST /admin/core/customuser/ HTTP/1.1" 302 0
+"GET /admin/core/customuser/ HTTP/1.1" 200 13772
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/10/change/ HTTP/1.1" 200 27475
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"POST /admin/logout/ HTTP/1.1" 200 3633
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET / HTTP/1.1" 200 12634
+"GET /login/ HTTP/1.1" 200 6298
+"GET /register/ HTTP/1.1" 200 10702
+"POST /register/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 7270
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 3926
+"GET /dashboard/ HTTP/1.1" 200 7270
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12634
+"GET /register/ HTTP/1.1" 200 11075
+"GET / HTTP/1.1" 200 12634
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12433
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 16723
+"GET /jardines/ HTTP/1.1" 200 5984
+"GET /dashboard/ HTTP/1.1" 200 16723
+"GET /plantas/ HTTP/1.1" 200 21639
+"GET /plantas/ HTTP/1.1" 200 21639
+"GET /dashboard/ HTTP/1.1" 200 16723
+"GET /jardines/ HTTP/1.1" 200 5984
+"GET /jardines/crear/ HTTP/1.1" 200 12219
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12433
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4438
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 18938
+"GET /api/v1/ HTTP/1.1" 200 5933
+"GET /admin/ HTTP/1.1" 200 10177
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+"GET /jardines/2/ HTTP/1.1" 200 10031
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10247
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23848
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10247
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12433
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4468
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 10045
+"GET /admin/core/customuser/ HTTP/1.1" 200 14074
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET / HTTP/1.1" 200 14045
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12433
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12433
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4368
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4440
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 10045
+"GET /admin/ HTTP/1.1" 200 10045
+"GET / HTTP/1.1" 200 14045
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12433
+"GET / HTTP/1.1" 200 12433
+"GET /login/ HTTP/1.1" 200 6470
+"POST /login/ HTTP/1.1" 200 6475
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 16723
+"GET /plantas/ HTTP/1.1" 200 21639
+"GET /jardines/crear/ HTTP/1.1" 200 12219
+"GET /jardines/crear/ HTTP/1.1" 200 12219
+"POST /jardines/crear/ HTTP/1.1" 302 0
+"GET /jardines/ HTTP/1.1" 200 6672
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/crear-plan/ HTTP/1.1" 200 15383
+"POST /jardines/4/crear-plan/ HTTP/1.1" 302 0
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /dashboard/ HTTP/1.1" 200 18136
+"GET /jardines/ HTTP/1.1" 200 6672
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17972
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/crear-plan/ HTTP/1.1" 200 15383
+"GET / HTTP/1.1" 200 13568
+"GET /plantas/ HTTP/1.1" 200 21639
+"GET /dashboard/ HTTP/1.1" 200 18136
+"GET /jardines/ HTTP/1.1" 200 6672
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17972
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17972
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /plantas/ HTTP/1.1" 200 21639
+"GET /plantas/23/ HTTP/1.1" 200 8713
+"GET /jardines/ HTTP/1.1" 200 6672
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12433
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12433
+"GET /login/ HTTP/1.1" 200 10286
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 24112
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"GET /dashboard/ HTTP/1.1" 200 24112
+"GET /plantas/ HTTP/1.1" 200 21639
+"GET /dashboard/ HTTP/1.1" 200 24112
+"GET /jardines/ HTTP/1.1" 200 6672
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/crear-plan/ HTTP/1.1" 200 15383
+"POST /jardines/4/crear-plan/ HTTP/1.1" 302 0
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"GET / HTTP/1.1" 200 13568
+"GET /dashboard/ HTTP/1.1" 200 24112
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12433
+"GET /login/ HTTP/1.1" 200 7140
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 24112
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12433
+"GET /plantas/ HTTP/1.1" 200 20504
+"GET /plantas/23/ HTTP/1.1" 200 7297
+"GET /plantas/ HTTP/1.1" 200 20504
+"GET / HTTP/1.1" 200 12433
+Forbidden: /api/v1/
+"GET /api/v1/ HTTP/1.1" 403 4998
+Forbidden: /api/v1/
+"GET /api/v1/ HTTP/1.1" 403 4998
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12433
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4381
+"GET / HTTP/1.1" 200 12433
+"GET /plantas/ HTTP/1.1" 200 20504
+"GET /login/ HTTP/1.1" 200 6097
+"GET /login/ HTTP/1.1" 200 6097
+"GET /login/ HTTP/1.1" 200 6097
+"GET /register/ HTTP/1.1" 200 10501
+"GET /login/ HTTP/1.1" 200 6097
+"GET /register/ HTTP/1.1" 200 10501
+Forbidden: /api/v1/
+"GET /api/v1/ HTTP/1.1" 403 4998
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /plantas/ HTTP/1.1" 200 20504
+"GET / HTTP/1.1" 200 12433
+"GET /plantas/ HTTP/1.1" 200 20504
+"GET /login/ HTTP/1.1" 200 6097
+"GET /register/ HTTP/1.1" 200 10501
+"GET / HTTP/1.1" 200 12433
+"GET /register/ HTTP/1.1" 200 10501
+"GET /login/ HTTP/1.1" 200 6097
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 24920
+"GET /jardines/crear/ HTTP/1.1" 200 12696
+"GET /jardines/2/ HTTP/1.1" 200 10031
+"GET /jardines/2/crear-plan/ HTTP/1.1" 200 15856
+"GET /jardines/2/ HTTP/1.1" 200 10031
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10247
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23848
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10247
+"GET /api/v1/ HTTP/1.1" 200 5933
+"GET /admin/ HTTP/1.1" 200 10277
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12433
+"GET /login/ HTTP/1.1" 200 6470
+"POST /login/ HTTP/1.1" 200 6466
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 24112
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12433
+"GET /login/ HTTP/1.1" 200 8185
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 10045
+"GET /admin/ai_recommendations/userfeedback/ HTTP/1.1" 200 11161
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /admin/gardens/cultivationplan/ HTTP/1.1" 200 13750
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/gardens/garden/ HTTP/1.1" 200 13649
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/gardens/plant/ HTTP/1.1" 200 15798
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /admin/core/customuser/ HTTP/1.1" 200 14074
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/16/change/ HTTP/1.1" 200 27509
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+"GET /admin/auth/group/ HTTP/1.1" 200 9734
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/ai_recommendations/airecommendation/ HTTP/1.1" 200 11823
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/ HTTP/1.1" 200 10045
+"POST /admin/logout/ HTTP/1.1" 200 3633
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 24920
+"GET /jardines/2/ HTTP/1.1" 200 10031
+"GET /jardines/2/recomendaciones/ HTTP/1.1" 200 10247
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23848
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23848
+"POST /jardines/2/recomendaciones/ HTTP/1.1" 200 23848
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 7845
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 24112
+"GET / HTTP/1.1" 200 13453
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 6789
+"POST /login/ HTTP/1.1" 200 6466
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 18157
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"GET /jardines/4/crear-plan/?plant_id=18 HTTP/1.1" 200 15383
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 7836
+"GET /login/ HTTP/1.1" 200 6097
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 18157
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 7487
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12297
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4381
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 18157
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 7138
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 6097
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 200 6466
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 18157
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 7138
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 18157
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 7487
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 6097
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 18157
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17975
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 7487
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 6097
+"POST /login/ HTTP/1.1" 302 0
+"GET /dashboard/ HTTP/1.1" 200 18157
+"GET /jardines/crear/ HTTP/1.1" 200 12219
+"GET / HTTP/1.1" 200 13453
+"GET / HTTP/1.1" 200 13453
+"GET /dashboard/ HTTP/1.1" 200 18157
+"GET /jardines/crear/ HTTP/1.1" 200 12219
+"GET /plantas/ HTTP/1.1" 200 21639
+"GET /jardines/ HTTP/1.1" 200 6672
+"GET /jardines/4/ HTTP/1.1" 200 9869
+"GET /jardines/4/recomendaciones/ HTTP/1.1" 200 9777
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"POST /jardines/4/recomendaciones/ HTTP/1.1" 200 17978
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297
+"GET /login/ HTTP/1.1" 200 7487
+"GET /login/ HTTP/1.1" 200 6097
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 12297
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4381
+"GET /login/ HTTP/1.1" 200 6097
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4237
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 10045
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /admin/gardens/plant/ HTTP/1.1" 200 15798
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /admin/gardens/garden/ HTTP/1.1" 200 13649
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/gardens/cultivationplan/ HTTP/1.1" 200 13750
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/core/customuser/ HTTP/1.1" 200 14074
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/auth/group/ HTTP/1.1" 200 9734
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/ai_recommendations/userfeedback/ HTTP/1.1" 200 11161
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET /admin/ai_recommendations/airecommendation/ HTTP/1.1" 200 11823
+"GET /admin/jsi18n/ HTTP/1.1" 200 8006
+"GET / HTTP/1.1" 200 14222
+"GET /api/v1/ HTTP/1.1" 200 5933
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 12297

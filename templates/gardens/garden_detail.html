@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ garden.name }} - HortechIA{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2><i class="fas fa-leaf me-2"></i>{{ garden.name }}</h2>
+            <p class="text-muted">{{ garden.location }}</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <a href="{% url 'gardens_list' %}" class="btn btn-outline-secondary me-2">
+                <i class="fas fa-arrow-left me-1"></i>Volver
+            </a>
+            <a href="{% url 'ai_recommendations' garden.id %}" class="btn btn-success">
+                <i class="fas fa-brain me-1"></i>IA
+            </a>
+        </div>
+    </div>
+
+    <!-- Información del jardín -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5><i class="fas fa-info-circle me-2"></i>Información del Jardín</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <h6>Tamaño</h6>
+                            <p class="mb-0"><i class="fas fa-ruler-combined text-success me-1"></i>{{ garden.size_m2 }} m²</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <h6>Tipo de Suelo</h6>
+                            <p class="mb-0"><i class="fas fa-mountain text-success me-1"></i>{{ garden.get_soil_type_display }}</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <h6>Exposición Solar</h6>
+                            <p class="mb-0"><i class="fas fa-sun text-success me-1"></i>{{ garden.get_sun_exposure_display }}</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <h6>Sistema de Riego</h6>
+                            <p class="mb-0">
+                                {% if garden.has_irrigation %}
+                                    <i class="fas fa-check text-success me-1"></i>Sí
+                                {% else %}
+                                    <i class="fas fa-times text-danger me-1"></i>No
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    {% if garden.notes %}
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <h6>Notas</h6>
+                            <p class="mb-0">{{ garden.notes }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Acciones rápidas -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <a href="{% url 'ai_recommendations' garden.id %}" class="btn btn-success w-100">
+                                <i class="fas fa-brain me-1"></i>Generar Recomendaciones IA
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <a href="{% url 'create_cultivation_plan' garden.id %}" class="btn btn-info w-100">
+                                <i class="fas fa-plus me-1"></i>Nuevo Plan de Cultivo
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <a href="{% url 'plants_catalog' %}" class="btn btn-outline-primary w-100">
+                                <i class="fas fa-book me-1"></i>Explorar Plantas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensaje si no hay planes -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-calendar-alt me-2"></i>Planes de Cultivo</h5>
+                </div>
+                <div class="card-body">
+                    <div class="text-center py-4">
+                        <i class="fas fa-calendar-plus fa-3x text-muted mb-3"></i>
+                        <h5>¡Empieza a planificar tu cultivo!</h5>
+                        <p class="text-muted">Usa nuestra IA para obtener recomendaciones personalizadas</p>
+                        <a href="{% url 'ai_recommendations' garden.id %}" class="btn btn-success me-2">
+                            <i class="fas fa-brain me-1"></i>Generar Recomendaciones IA
+                        </a>
+                        <a href="{% url 'plants_catalog' %}" class="btn btn-outline-primary">
+                            <i class="fas fa-book me-1"></i>Explorar Plantas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

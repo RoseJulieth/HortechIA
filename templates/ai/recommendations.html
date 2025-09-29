@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+
+{% block title %}Recomendaciones IA - {{ garden.name }} - HortechIA{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2><i class="fas fa-brain me-2"></i>Recomendaciones IA</h2>
+            <p class="text-muted">Para: <strong>{{ garden.name }}</strong></p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <a href="{% url 'garden_detail' garden.id %}" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-1"></i>Volver al Jardín
+            </a>
+        </div>
+    </div>
+
+    <!-- Información del jardín -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h6>Información del jardín:</h6>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <small class="text-muted">Tamaño:</small><br>
+                            <strong>{{ garden.size_m2 }}m²</strong>
+                        </div>
+                        <div class="col-md-3">
+                            <small class="text-muted">Tipo de suelo:</small><br>
+                            <strong>{{ garden.get_soil_type_display }}</strong>
+                        </div>
+                        <div class="col-md-3">
+                            <small class="text-muted">Exposición solar:</small><br>
+                            <strong>{{ garden.get_sun_exposure_display }}</strong>
+                        </div>
+                        <div class="col-md-3">
+                            <small class="text-muted">Tu experiencia:</small><br>
+                            <strong>{{ user.get_experience_level_display }}</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón para generar recomendaciones -->
+    {% if not recommendations %}
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <div class="card">
+                <div class="card-body py-5">
+                    <i class="fas fa-robot fa-3x text-success mb-3"></i>
+                    <h4>Genera recomendaciones personalizadas</h4>
+                    <p class="text-muted">Nuestra IA analizará las características de tu jardín y tu nivel de experiencia para sugerir las mejores plantas para ti.</p>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="fas fa-magic me-2"></i>Generar Recomendaciones IA
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Recomendaciones generadas -->
+    {% if recommendations %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5><i class="fas fa-lightbulb me-2"></i>Recomendaciones Personalizadas</h5>
+                    <small>Generadas el {% now "d/m/Y H:i" %}</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for rec in recommendations %}
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100 recommendation-card">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-0">{{ rec.plant_name }}</h6>
+                                    <div class="confidence-score">
+                                        {% if rec.confidence_score >= 0.9 %}
+                                            <span class="badge bg-success">{{ rec.confidence_score|floatformat:0 }}%</span>
+                                        {% elif rec.confidence_score >= 0.8 %}
+                                            <span class="badge bg-info">{{ rec.confidence_score|floatformat:0 }}%</span>
+                                        {% else %}
+                                            <span class="badge bg-warning">{{ rec.confidence_score|floatformat:0 }}%</span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2">
+                                        <span class="badge bg-light text-dark">{{ rec.plant_difficulty }}</span>
+                                        <span class="badge bg-light text-dark">{{ rec.space_required }}m²</span>
+                                    </div>
+                                    
+                                    <h6>¿Por qué es ideal para ti?</h6>
+                                    <ul class="small">
+                                        {% for reason in rec.reasons %}
+                                        <li>{{ reason }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                    
+                                    <div class="mt-3">
+                                        <small class="text-muted">
+                                            <i class="fas fa-calendar me-1"></i>Cosecha estimada: {{ rec.estimated_harvest_date }}
+                                        </small><br>
+                                        <small class="text-muted">
+                                            <i class="fas fa-tint me-1"></i>Riego cada {{ rec.water_frequency }} días
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-transparent">
+                                    <a href="{% url 'create_cultivation_plan' garden.id %}?plant_id={{ rec.plant_id }}" 
+                                       class="btn btn-success btn-sm w-100">
+                                        <i class="fas fa-plus me-1"></i>Crear Plan de Cultivo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <!-- Botón para generar nuevas recomendaciones -->
+                    <div class="text-center mt-4">
+                        <form method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-outline-success">
+                                <i class="fas fa-sync-alt me-1"></i>Generar Nuevas Recomendaciones
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Información adicional -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">
+                    <h6><i class="fas fa-info-circle me-1"></i>Cómo funciona nuestra IA</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Factores considerados:</h6>
+                            <ul class="small">
+                                <li>Tu nivel de experiencia en jardinería</li>
+                                <li>Tamaño y características de tu jardín</li>
+                                <li>Tipo de suelo y exposición solar</li>
+                                <li>Época del año actual</li>
+                                <li>Compatibilidad entre plantas</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Score de confianza:</h6>
+                            <ul class="small">
+                                <li><span class="badge bg-success">90%+</span> Altamente recomendado</li>
+                                <li><span class="badge bg-info">80-89%</span> Buena opción</li>
+                                <li><span class="badge bg-warning">70-79%</span> Considera con cuidado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.recommendation-card {
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.confidence-score .badge {
+    font-size: 0.8em;
+}
+</style>
+{% endblock %}

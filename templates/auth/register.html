@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block title %}Registro - HortechIA{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4><i class="fas fa-user-plus me-2"></i>Crear Cuenta</h4>
+                </div>
+                <div class="card-body p-4">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="first_name" class="form-label">
+                                    <i class="fas fa-user me-1"></i>Nombre
+                                </label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="last_name" class="form-label">
+                                    <i class="fas fa-user me-1"></i>Apellido
+                                </label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="username" class="form-label">
+                                <i class="fas fa-at me-1"></i>Nombre de Usuario
+                            </label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                            <div class="form-text">Solo letras, números y guiones bajos</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope me-1"></i>Email
+                            </label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password1" class="form-label">
+                                <i class="fas fa-lock me-1"></i>Contraseña
+                            </label>
+                            <input type="password" class="form-control" id="password1" name="password1" required>
+                            <div class="form-text">Mínimo 8 caracteres</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password2" class="form-label">
+                                <i class="fas fa-lock me-1"></i>Confirmar Contraseña
+                            </label>
+                            <input type="password" class="form-control" id="password2" name="password2" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="experience_level" class="form-label">
+                                <i class="fas fa-seedling me-1"></i>Nivel de Experiencia
+                            </label>
+                            <select class="form-select" id="experience_level" name="experience_level" required>
+                                <option value="">Selecciona tu nivel</option>
+                                <option value="beginner">Principiante - Recién empiezo</option>
+                                <option value="intermediate">Intermedio - Tengo algo de experiencia</option>
+                                <option value="advanced">Avanzado - Soy experimentado</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="location" class="form-label">
+                                <i class="fas fa-map-marker-alt me-1"></i>Ubicación (opcional)
+                            </label>
+                            <input type="text" class="form-control" id="location" name="location" 
+                                   placeholder="Ej: Santiago, Chile">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="available_space" class="form-label">
+                                <i class="fas fa-ruler-combined me-1"></i>Espacio Disponible (m²) (opcional)
+                            </label>
+                            <input type="number" class="form-control" id="available_space" name="available_space" 
+                                   min="0.1" step="0.1" placeholder="Ej: 5.5">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100 mb-3">
+                            <i class="fas fa-user-plus me-1"></i>Crear Cuenta
+                        </button>
+                    </form>
+
+                    <div class="text-center">
+                        <p class="mb-2">¿Ya tienes cuenta?</p>
+                        <a href="{% url 'login' %}" class="btn btn-outline-success mb-2">
+                            <i class="fas fa-sign-in-alt me-1"></i>Iniciar Sesión
+                        </a>
+                        <br>
+                        <a href="{% url 'home' %}" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-1"></i>Volver al Inicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información sobre el registro -->
+            <div class="card mt-3 border-info">
+                <div class="card-header bg-info text-white">
+                    <h6 class="mb-0"><i class="fas fa-info-circle me-1"></i>¿Por qué registrarse?</h6>
+                </div>
+                <div class="card-body">
+                    <ul class="mb-0">
+                        <li>Recomendaciones de IA personalizadas</li>
+                        <li>Gestión de múltiples jardines</li>
+                        <li>Seguimiento de tus cultivos</li>
+                        <li>Acceso al catálogo completo de plantas</li>
+                        <li>Planes de cultivo inteligentes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

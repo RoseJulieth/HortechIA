@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime, timedelta
 import logging
+from django.conf import settings
 
 logger = logging.getLogger(__name__)
 
@@ -10,9 +11,8 @@ class WeatherService:
     """
     
     def __init__(self):
-        # API key gratuita de OpenWeatherMap (limitada pero funcional para demo)
-        # En producción, esto iría en variables de entorno
-        self.api_key = "demo_key"  # Usaremos datos simulados para el prototipo
+        # Obtener API key de settings
+        self.api_key = settings.OPENWEATHER_API_KEY if settings.OPENWEATHER_API_KEY else "demo_key"
         self.base_url = "http://api.openweathermap.org/data/2.5"
         
     def get_current_weather(self, location):

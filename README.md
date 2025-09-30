@@ -30,6 +30,165 @@ Este prototipo funcional implementa las metodologías de desarrollo ágil (Scrum
   - Visualización de jardines del usuario
   - Dashboard personalizado
 
+- **Widget del Clima**
+  - Información climática actual con temperatura y condiciones
+  - Pronóstico de 7 días con temperaturas máximas y mínimas
+  - Consejos de jardinería basados en el clima del día
+  - Datos simulados realistas (configurable con API real)
+
+- **Recomendaciones de IA**
+  - Algoritmo de recomendación basado en múltiples variables
+  - Score de confianza por cada recomendación
+  - Personalización según nivel de experiencia del usuario
+  - Análisis de compatibilidad planta-jardín
+
+- **Catálogo de Plantas**
+  - Base de datos de plantas con información técnica
+  - Filtros por dificultad y búsqueda por nombre
+  - Fichas detalladas con requerimientos de cultivo
+  - Información de cosecha y cuidados
+
+- **Planes de Cultivo**
+  - Creación de planes vinculados a jardines específicos
+  - Cálculo automático de fecha de cosecha
+  - Seguimiento del estado de cultivos
+  - Integración con recomendaciones IA
+
+- **Panel de Administración**
+  - Interfaz Django Admin completa
+  - Gestión de usuarios, plantas y jardines
+  - Control total del sistema
+
+## 🛠️ Tecnologías Utilizadas
+
+### Backend
+- **Framework:** Django 4.2.7
+- **API REST:** Django REST Framework 3.14.0
+- **Base de Datos:** SQLite (desarrollo) / MySQL (producción)
+- **Autenticación:** Django Authentication System
+- **Seguridad:** django-ratelimit, CORS headers
+
+### Frontend
+- **UI Framework:** Bootstrap 5.1.3
+- **Icons:** Font Awesome 6.0.0
+- **Template Engine:** Django Templates
+- **JavaScript:** Vanilla JS
+
+### Herramientas de Desarrollo
+- **Control de Versiones:** Git / GitHub
+- **IDE:** Visual Studio Code
+- **Testing:** Django TestCase, pytest
+- **Gestión de Dependencias:** pip + requirements.txt
+
+## 📁 Estructura del Proyecto
+
+hortechia-mvp/
+├── hortechia_project/          # Configuración principal Django
+│   ├── settings.py            # Configuración del proyecto
+│   ├── urls.py                # Rutas principales
+│   └── wsgi.py                # WSGI para despliegue
+├── core/                       # App de usuarios y autenticación
+│   ├── models.py              # Modelo de usuario personalizado
+│   ├── views.py               # Vistas de auth y dashboard
+│   ├── admin.py               # Configuración admin
+│   ├── weather_service.py     # Servicio del clima
+│   ├── templatetags/          # Filtros personalizados
+│   │   └── weather_filters.py # Filtros para widget del clima
+│   └── tests.py               # Tests de seguridad
+├── gardens/                    # App de jardines y plantas
+│   ├── models.py              # Modelos Garden, Plant, CultivationPlan
+│   ├── views.py               # Vistas y API REST
+│   ├── serializers.py         # Serializadores API
+│   ├── admin.py               # Admin de jardines
+│   └── tests.py               # Tests funcionales
+├── ai_recommendations/         # App de IA
+│   ├── models.py              # Modelo de recomendaciones
+│   ├── views.py               # API de recomendaciones
+│   ├── ai_service.py          # Lógica del algoritmo IA
+│   └── admin.py               # Admin de IA
+├── templates/                  # Templates HTML
+│   ├── base.html              # Template base
+│   ├── index.html             # Página principal
+│   ├── auth/                  # Templates de autenticación
+│   ├── dashboard/             # Dashboard de usuario
+│   ├── gardens/               # Gestión de jardines
+│   ├── plants/                # Catálogo de plantas
+│   └── ai/                    # Recomendaciones IA
+├── static/                     # Archivos estáticos CSS/JS
+├── media/                      # Archivos subidos por usuarios
+├── requirements.txt            # Dependencias Python
+├── .gitignore                 # Archivos ignorados por Git
+├── .env                       # Variables de entorno (no incluido en repo)
+├── db.sqlite3                 # Base de datos (desarrollo)
+└── README.md                  # Este archivo
+
+## 🚀 Instalación y Configuración
+
+### Prerrequisitos
+- Python 3.8 o superior
+- pip (gestor de paquetes Python)
+- Git
+
+### Pasos de Instalación
+
+#### 1. Clonar el repositorio
+```bash
+git clone https://github.com/RoseJulieth/HortechIA
+cd hortechia-mvp
+
+#### 2. Crear y activar entorno virtual
+bash# Windows PowerShell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+# Si hay error de permisos en PowerShell, ejecuta primero:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+
+
+
+
+
+
+
+
+
+# HortechIA MVP - Prototipo de Jardinería Inteligente
+
+## 📋 Información del Proyecto
+
+**Asignatura:** Ingeniería de Software  
+**Evaluación:** Sumativa N°3 (40%)  
+**Institución:** [Tu Universidad]  
+**Desarrolladores:** Jennifer Astudillo y Carlos Velásquez  
+**Fecha:** 30 de Septiembre, 2025
+
+## 🌱 Descripción del Proyecto
+
+HortechIA es una plataforma web de jardinería doméstica que utiliza inteligencia artificial para democratizar el conocimiento agrícola. El sistema proporciona recomendaciones personalizadas de cultivo basadas en el perfil del usuario, características del jardín, y condiciones climáticas locales.
+
+Este prototipo funcional implementa las metodologías de desarrollo ágil (Scrum + Design Thinking) y cumple con estándares internacionales de calidad (ISO 9001, ISO/IEC 25000, ISO/IEC 12207) y seguridad (OWASP Top 10).
+
+## ✨ Características Principales
+
+### Funcionalidades Implementadas
+
+- **Sistema de Autenticación Completo**
+  - Registro de usuarios con validación de datos
+  - Inicio de sesión seguro con autenticación por email
+  - Gestión de sesiones y cierre de sesión
+  - Control de acceso basado en roles
+
+- **Gestión de Jardines**
+  - Creación de jardines con información detallada
+  - Especificación de tipo de suelo, exposición solar y tamaño
+  - Visualización de jardines del usuario
+  - Dashboard personalizado
+
 - **Recomendaciones de IA**
   - Algoritmo de recomendación basado en múltiples variables
   - Score de confianza por cada recomendación
@@ -125,7 +284,7 @@ hortechia-mvp/
 
 1. **Clonar el repositorio**
 ```bash
-git clone https://github.com/tu-usuario/hortechia-mvp.git
+git clone https://github.com/RoseJulieth/HortechIA.git
 cd hortechia-mvp
 ```
 
@@ -178,6 +337,13 @@ python manage.py runserver
 - Frontend: http://127.0.0.1:8000
 - Admin: http://127.0.0.1:8000/admin/
 - API: http://127.0.0.1:8000/api/v1/
+
+### Variables de Entorno (Opcional)
+Crea un archivo `.env` en la raíz del proyecto para personalizar la configuración:
+```bash
+SECRET_KEY=RoseJulieth
+DEBUG=True
+OPENWEATHER_API_KEY=eclipse1234  # Opcional: Para datos reales del clima
 
 ## 👥 Uso del Sistema
 

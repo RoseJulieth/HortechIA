@@ -154,3 +154,6 @@ LOGGING = {
         },
     },
 }
+
+# API del Clima
+OPENWEATHER_API_KEY = config('OPENWEATHER_API_KEY', default='')
